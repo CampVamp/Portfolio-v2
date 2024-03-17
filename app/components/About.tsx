@@ -15,11 +15,12 @@ const About = () => {
           <br />I have a strong command of the {""}
           <span className="text-neonGreen">MERN</span> stack, allowing me to
           create dynamic and efficient web applications. From simple landing
-          pages to intricate dashboards, I've had the opportunity to work on a
-          variety of projects that have honed my skills and expanded my
+          pages to intricate dashboards, I&apos;ve had the opportunity to work
+          on a variety of projects that have honed my skills and expanded my
           capabilities. <br />
-          <br /> Beyond my academic pursuits, I've been actively involved in
-          various college clubs, where I've collaborated with others and {""}
+          <br /> Beyond my academic pursuits, I&apos;ve been actively involved
+          in various college clubs, where I&apos;ve collaborated with others and{" "}
+          {""}
           <span className="text-neonGreen">contributed</span> to the community.
           These experiences have not only enriched my personal growth but have
           also taught me the value of teamwork and communication in achieving
