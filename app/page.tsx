@@ -1,11 +1,13 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Skills from "./components/Skills";
 
 const Home = () => {
   return (
     <div className="w-full">
       <Hero />
       <About />
+      <Skills />
     </div>
   );
 };
