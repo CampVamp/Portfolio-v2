@@ -5,7 +5,7 @@ const About = () => {
         <div className="text-yellowGreen text-4xl md:text-6xl font-semibold">
           About Me
         </div>
-        <div className="text-xl md:text-3xl font-medium text-stone-300">
+        <div className="text-xl md:text-3xl font-medium text-stone-300 text-justify">
           A passionate{" "}
           <span className="text-neonGreen">Full stack developer</span> currently
           in my 3rd year of pursuing a Computer Science Degree at SRM
