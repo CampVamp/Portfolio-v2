@@ -13,33 +13,29 @@ const Hero = () => {
     curviness: 1.25,
     autoRotate: true,
     values: [
-      { x: 100, y: -20 },
-      { x: 300, y: 10 },
-      { x: 500, y: 100 },
-      { x: 750, y: -100 },
-      { x: 350, y: -50 },
-      { x: 600, y: 100 },
-      { x: 800, y: 0 },
-      { x: window.innerWidth - 600, y: -250 },
-      { x: window.innerWidth - 500, y: -100 },
+      { x: 200, y: 0, scale: 4 },
+      { x: 600, y: 0, scale: 6 },
+      { x: 3000, y: -100, scale: 3 },
+      { x: 2000, y: -600, scale: 3 },
+      { x: 900, y: 0, scale: 3 },
+      { x: 1200, y: -10, scale: 2 },
+      { x: 1350, y: -40, scale: 2 },
     ],
   };
   useGSAP(() => {
     const tween = gsap.to(paperPlaneRef.current, {
-      duration: 10,
+      duration: 4,
       motionPath: {
         path: flightPath.values,
         curviness: flightPath.curviness,
         autoRotate: flightPath.autoRotate,
       },
-      ease: "power1.inOut",
-      // repeat: -1,
-      // yoyo: true,
+      ease: "power2.inOut",
     });
   });
 
   return (
-    <div className="relative h-screen w-full flex items-center px-6 md:px-12">
+    <div className="relative h-screen w-full flex items-center px-6 md:px-12 overflow-hidden">
       <div className="flex flex-col justify-center gap-4 md:gap-8">
         <div className="text-5xl md:text-9xl font-semibold text-neonGreen flex flex-col gap-4">
           <div>Hello</div>
@@ -50,7 +46,7 @@ const Hero = () => {
           Full Stack Developer
         </div>
       </div>
-      <div className="absolute h-72 w-72">
+      <div className="absolute h-72 w-72 -left-80 hidden md:block">
         <Image src={PaperPlane} alt="Plane" fill ref={paperPlaneRef} />
       </div>
     </div>
