@@ -3,7 +3,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import PaperPlane from "@/public/paper-plane.png";
+import PaperPlane from "@/public/paper-plane.svg";
 import Image from "next/image";
 
 const Hero = () => {
@@ -13,7 +13,8 @@ const Hero = () => {
     curviness: 1.25,
     autoRotate: true,
     values: [
-      { x: 200, y: 0, scale: 4 },
+      { x: 100, y: 0, scale: 5 },
+      { x: 200, y: 0, scale: 7 },
       { x: 600, y: 0, scale: 6 },
       { x: 3000, y: -100, scale: 3 },
       { x: 2000, y: -600, scale: 3 },
@@ -47,7 +48,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute h-72 w-72 -left-80 hidden md:block">
-        <Image src={PaperPlane} alt="Plane" fill ref={paperPlaneRef} />
+        <Image
+          src={PaperPlane}
+          alt="Plane"
+          fill
+          ref={paperPlaneRef}
+          className="text-neonGreen"
+        />
       </div>
     </div>
   );
