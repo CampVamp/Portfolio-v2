@@ -6,11 +6,16 @@ const Skills = () => {
   return (
     <div className="w-full flex justify-center items-center py-28">
       <div className="flex flex-col w-4/5 gap-6">
-        <div className="text-yellowGreen text-6xl font-semibold">Skills</div>
+        <div className="text-yellowGreen text-4xl md:text-6xl font-semibold">
+          Skills
+        </div>
         <div className="flex flex-col justify-center gap-8">
           {skills.map((skill, idx) => (
-            <div className="flex flex-col justify-center gap-6" key={idx}>
-              <div className="text-neonGreen text-3xl font-medium">
+            <div
+              className="flex flex-col justify-center gap-3 md:gap-6"
+              key={idx}
+            >
+              <div className="text-neonGreen text-xl md:text-3xl font-medium">
                 {skill.section}
               </div>
               <Marquee
