@@ -9,21 +9,30 @@ import Image from "next/image";
 const Hero = () => {
   gsap.registerPlugin(MotionPathPlugin);
   const paperPlaneRef = useRef(null);
-  const flightPath = {
-    curviness: 1.25,
-    autoRotate: true,
-    values: [
-      { x: 100, y: 0, scale: 5 },
-      { x: 200, y: 0, scale: 7 },
-      { x: 600, y: 0, scale: 6 },
-      { x: 3000, y: -100, scale: 3 },
-      { x: 2000, y: -600, scale: 3 },
-      { x: 900, y: 0, scale: 3 },
-      { x: 1200, y: -10, scale: 2 },
-      { x: 1350, y: -40, scale: 2 },
-    ],
+
+  const getFlightPath = () => {
+    const screenWidth = window.innerWidth;
+
+    const baseX = screenWidth * 0.3;
+    const pathLength = screenWidth * 0.8;
+
+    return {
+      curviness: 1.25,
+      autoRotate: true,
+      values: [
+        { x: baseX, y: 0, scale: 5 },
+        { x: baseX + pathLength * 0.2, y: 0, scale: 7 },
+        { x: baseX + pathLength, y: -100, scale: 3 },
+        { x: baseX + pathLength * 0.8, y: -600, scale: 3 },
+        { x: baseX + pathLength * 0.5, y: 0, scale: 3 },
+        { x: baseX + pathLength * 0.6, y: -10, scale: 2 },
+        { x: baseX + pathLength * 0.7, y: -40, scale: 2 },
+      ],
+    };
   };
+
   useGSAP(() => {
+    const flightPath = getFlightPath();
     const tween = gsap.to(paperPlaneRef.current, {
       duration: 4,
       motionPath: {
