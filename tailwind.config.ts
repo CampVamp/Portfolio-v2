@@ -9,9 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        neonGreen: "#04FC04",
-        yellowGreen: "#c4d4b4",
-        redOrange: "#5c422f",
+        primary: "#04FC04",
+        secondary: "#c4d4b4",
       },
     },
   },

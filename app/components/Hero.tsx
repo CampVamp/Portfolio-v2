@@ -47,7 +47,7 @@ const Hero = () => {
   return (
     <div className="relative h-screen w-full flex items-center px-6 md:px-12 overflow-hidden">
       <div className="flex flex-col justify-center gap-4 md:gap-8">
-        <div className="text-5xl md:text-9xl font-semibold text-neonGreen flex flex-col gap-4">
+        <div className="text-5xl md:text-9xl font-semibold text-primary flex flex-col gap-4">
           <div>Hello</div>
           <div>My Name is</div>
           <div className="text-[#c4d4b4]">Ajay ram</div>
@@ -62,7 +62,7 @@ const Hero = () => {
           alt="Plane"
           fill
           ref={paperPlaneRef}
-          className="text-neonGreen"
+          className="text-primary"
         />
       </div>
     </div>
